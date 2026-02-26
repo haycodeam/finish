@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #070e1c, #1c1c3c);
+    color: #fff;
+    position: relative;
+
+    .instabtn,
+    .telegbtn,
+    .youtubebtn {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        color: rgb(184, 49, 0);
+        top: 73%;
+        right: 1%;
+        z-index: 20;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .telegbtn {
+        top: 80%;
+    }
+
+    .youtubebtn {
+        top: 87%;
+    }
+
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.menu-toggle:hover {
+    color: rgba(138, 43, 226, 0.8);
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.logo {
+    font-size: 20px;
+}
+
+
+.logo>img {
+    width: 40px;
+    justify-content: start;
+}
+
+.nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: .3s;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.menu a:hover {
+    background: rgba(10, 0, 143, 0.4);
+    box-shadow: 0 0 15px rgba(10, 0, 143, 0.7);
+}
+
+.lang-switch button,
+.lang-switch_mobile button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 6px 12px;
+    margin-left: 5px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    backdrop-filter: blur(8px);
+}
+
+.lang-switch button:hover,
+.lang-switch_mobile button:hover {
+    background: rgba(10, 0, 143, 0.5);
+    box-shadow: 0 0 12px rgba(10, 0, 143, 0.6);
+}
+
+.first_section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .8)),
+        url("./Gallery/IMG_9218.jpg") center/cover;
+}
+
+.hero-content h1 {
+    font-size: 35px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    padding: 12px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+    background: rgba(10, 0, 143, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+.section {
+    width: 100%;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.aboutSection {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgb(0, 0, 0)),
+        url("./Gallery/IMG_8967.jpg") center/cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-top: 5px solid rgb(69, 69, 69);
+    border-bottom: 5px solid rgb(69, 69, 69);
+}
+
+.section-title {
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 20px;
+
+    h2 {
+        font-size: 80px;
+    }
+}
+
+.about-box {
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+    span {
+        font-size: 180px;
+    }
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+}
+
+.services2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title-sub {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.card {
+    width: 450px;
+    padding: 40px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(109, 109, 109, 0.258);
+    box-shadow: 0 8px 32px rgba(109, 109, 109, 0.165);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        background: linear-gradient(135deg, rgba(109, 109, 109, 0.114), rgba(106, 81, 190, 0.023));
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+
+
+
+.card-text {
+    position: relative;
+    z-index: 3;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 25px 60px rgba(106, 81, 190, 0.023), 0 0 60px rgba(106, 81, 190, 0.023);
+    border-color: rgba(106, 81, 190, 0.023);
+    background: linear-gradient(135deg, rgba(109, 109, 109, 0.114), rgba(106, 81, 190, 0.023));
+}
+
+.card-with-icon {
+    z-index: 1;
+}
+
+.booking-form {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.booking-form input,
+.booking-form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.booking-form button {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(10, 0, 143, 0.6);
+    color: white;
+    font-weight: bold;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.booking-form button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .link {
+        color: white;
+    }
+}
+
+/* ==================== MOBILE MENU ==================== */
+.lang-switch_mobile {
+    display: none;
+}
+
+/* ==================== АДАПТИВ И МОБИЛЬНОЕ МЕНЮ ==================== */
+
+@media (max-width: 1024px) {
+
+    /* Исправляем сетку сервисов для планшетов */
+    .services,
+    .services2 {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .container.nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        padding: 20px;
+        position: relative;
+    }
+
+    /* Само меню */
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 20, 0.95);
+        backdrop-filter: blur(15px);
+        overflow: hidden;
+        max-height: 0;
+        /* Изначально скрыто */
+        transition: max-height 0.4s ease-out;
+        /* Плавное выпадание */
+        z-index: 1000;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Класс, который добавляет JS */
+    .menu.active {
+        max-height: 500px;
+        /* Достаточная высота для всех ссылок */
+    }
+
+    .menu ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    /* Кнопка бургера */
+    .menu-toggle {
+        display: block;
+        /* Показываем только на мобильных */
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .logo {
+        order: 1;
+        font-size: 22px;
+    }
+
+    /* Скрываем десктопные переключатели, если нужно */
+    .lang-switch {
+        display: none;
+    }
+
+    .lang-switch_mobile {
+        display: flex;
+        order: 2;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    /* Выпадающее меню */
+    .menu {
+        position: absolute;
+        top: 100%;
+        /* Сразу под хедером */
+        left: 0;
+        width: 100%;
+        background: rgba(10, 10, 20, 0.98);
+        /* Более плотный цвет для читаемости */
+        backdrop-filter: blur(20px);
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom: 2px solid rgba(138, 43, 226, 0.3);
+        z-index: 999;
+    }
+
+    .menu.active {
+        max-height: 500px;
+        /* Увеличил, чтобы влезло всё */
+        padding-bottom: 20px;
+    }
+
+    .menu ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        gap: 10px;
+
+        li {
+            width: 80%;
+        }
+    }
+
+    .menu a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        margin: 5px 0;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Секция About для планшетов */
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+        /* Уменьшаем гигантский шрифт */
+    }
+
+    .about-box span {
+        font-size: 100px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .booking-form {
+        width: 90%;
+        padding: 25px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+}
